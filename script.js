@@ -58,15 +58,14 @@ var sortedWords = words.sort(byLength);
 
 var sortedWords = words.sort(function (A, B){
   if (A.length < B.length) {
-    return -1;
+    return 1;
   }
   else if (A.length === B.length) {
     return 0;
   }
   else {
-    return 1;
+    return -1;
   }
-  // your code here
 });
 
 
