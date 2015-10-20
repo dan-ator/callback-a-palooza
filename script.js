@@ -34,7 +34,15 @@ var dingHandle = setTimeout(writeDing, 3000);
 var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
 
 var byLength = function (A, B) {
-  // your code here
+  if(A.length < B.length){
+    return -1;
+  }
+  else if (A.length === B.length){
+    return  0;
+  }
+  else{
+    return 1;
+  }
 };
 
 var sortedWords = words.sort(byLength);
