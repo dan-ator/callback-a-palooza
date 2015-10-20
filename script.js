@@ -8,7 +8,7 @@ function writeDing() {
   console.log('Ding!');
 }
 
-var dingHandle = setTimeout (writeDing(), 3000);
+var dingHandle = setTimeout(writeDing, 3000);
 
 /*===============================================================*/
 
@@ -57,7 +57,15 @@ var sortedWords = words.sort(byLength);
 // the words from longest to shortest?  Write it as an anomymous function.
 
 var sortedWords = words.sort(function (A, B){
-  // your code here
+  if (A.length < B.length) {
+    return 1;
+  }
+  else if (A.length === B.length) {
+    return 0;
+  }
+  else {
+    return -1;
+  }
 });
 
 
